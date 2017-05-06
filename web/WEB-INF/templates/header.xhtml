@@ -1,0 +1,21 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+    <header>
+        <h1>EconomiC Analyzer</h1>
+        <h:form>  
+            <p:menubar>
+                <p:menuitem value="Home" icon="ui-icon-home" url="/faces/index.xhtml" />
+
+                <p:submenu label="Archive" icon="ui-icon-document">
+                    <p:menuitem value="List Archive" icon="ui-icon-script" url="/faces/archive.xhtml"/>
+                    <p:menuitem value="Import" icon="ui-icon ui-icon-arrowthickstop-1-n" url="/faces/import.xhtml"/>
+                </p:submenu>
+
+            </p:menubar>
+        </h:form>
+    </header>
+</ui:composition>

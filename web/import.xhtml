@@ -1,0 +1,25 @@
+<ui:composition template="/WEB-INF/templates/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:define name="content">
+        <h2 class="page-header">Importation</h2>
+        <br/>
+        <h:form id="formPrincipal" enctype="multipart/form-data">
+            <p:growl id="messages" showDetail="true" />
+
+            <p:fileUpload value="#{archiveBean.file}" mode="simple" style="width:700px"/>
+            <br/><br/>
+            <p:commandButton onclick="PF('statusDialog').show()" oncomplete="PF('statusDialog').hide()" value="Import" ajax="false" actionListener="#{archiveBean.upload}" disabled="false" />
+
+            <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+                Waiting... Processing. <br/>
+                <p:graphicImage name="images/ajaxloadingbar.gif" />
+            </p:dialog>
+
+
+        </h:form>
+    </ui:define>
+</ui:composition>
