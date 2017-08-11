@@ -3,6 +3,13 @@
   <persistence-unit name="persistence" transaction-type="JTA">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>model.Archive</class>
+    <class>model.Region</class>
+    <class>model.Fisherman</class>
+    <class>model.Program</class>
+    <class>model.Favored</class>
+    <class>model.Payment</class>
+    <class>model.State</class>
+    <class>model.City</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="eclipselink.ddl-generation.output-mode" value="database"/>
