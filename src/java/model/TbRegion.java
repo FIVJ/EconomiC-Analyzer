@@ -23,39 +23,33 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author lucas.vianna
+ * @author aluno
  */
 @Entity
-@Table(name = "region")
+@Table(name = "tb_region")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Region.findAll", query = "SELECT r FROM Region r"),
-    @NamedQuery(name = "Region.findByIdRegion", query = "SELECT r FROM Region r WHERE r.idRegion = :idRegion"),
-    @NamedQuery(name = "Region.findByName", query = "SELECT r FROM Region r WHERE r.name = :name")})
-public class Region implements Serializable {
+    @NamedQuery(name = "TbRegion.findAll", query = "SELECT t FROM TbRegion t")
+    , @NamedQuery(name = "TbRegion.findByIdRegion", query = "SELECT t FROM TbRegion t WHERE t.idRegion = :idRegion")
+    , @NamedQuery(name = "TbRegion.findByStrNameRegion", query = "SELECT t FROM TbRegion t WHERE t.strNameRegion = :strNameRegion")})
+public class TbRegion implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idRegion")
+    @Column(name = "id_region")
     private Integer idRegion;
-    @Basic(optional = false)
-    @Column(name = "name")
-    private String name;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "regionidRegion")
-    private Collection<State> stateCollection;
+    @Column(name = "str_name_region")
+    private String strNameRegion;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tbRegionIdRegion")
+    private Collection<TbState> tbStateCollection;
 
-    public Region() {
+    public TbRegion() {
     }
 
-    public Region(Integer idRegion) {
+    public TbRegion(Integer idRegion) {
         this.idRegion = idRegion;
-    }
-
-    public Region(Integer idRegion, String name) {
-        this.idRegion = idRegion;
-        this.name = name;
     }
 
     public Integer getIdRegion() {
@@ -66,21 +60,21 @@ public class Region implements Serializable {
         this.idRegion = idRegion;
     }
 
-    public String getName() {
-        return name;
+    public String getStrNameRegion() {
+        return strNameRegion;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStrNameRegion(String strNameRegion) {
+        this.strNameRegion = strNameRegion;
     }
 
     @XmlTransient
-    public Collection<State> getStateCollection() {
-        return stateCollection;
+    public Collection<TbState> getTbStateCollection() {
+        return tbStateCollection;
     }
 
-    public void setStateCollection(Collection<State> stateCollection) {
-        this.stateCollection = stateCollection;
+    public void setTbStateCollection(Collection<TbState> tbStateCollection) {
+        this.tbStateCollection = tbStateCollection;
     }
 
     @Override
@@ -93,10 +87,10 @@ public class Region implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Region)) {
+        if (!(object instanceof TbRegion)) {
             return false;
         }
-        Region other = (Region) object;
+        TbRegion other = (TbRegion) object;
         if ((this.idRegion == null && other.idRegion != null) || (this.idRegion != null && !this.idRegion.equals(other.idRegion))) {
             return false;
         }
@@ -105,7 +99,7 @@ public class Region implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Region[ idRegion=" + idRegion + " ]";
+        return "model.TbRegion[ idRegion=" + idRegion + " ]";
     }
     
 }

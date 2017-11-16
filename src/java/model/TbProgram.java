@@ -8,56 +8,57 @@ package model;
 import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author lucas.vianna
+ * @author aluno
  */
 @Entity
-@Table(name = "program")
+@Table(name = "tb_program")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Program.findAll", query = "SELECT p FROM Program p"),
-    @NamedQuery(name = "Program.findByIdProgram", query = "SELECT p FROM Program p WHERE p.idProgram = :idProgram"),
-    @NamedQuery(name = "Program.findByCodProgram", query = "SELECT p FROM Program p WHERE p.codProgram = :codProgram"),
-    @NamedQuery(name = "Program.findByName", query = "SELECT p FROM Program p WHERE p.name = :name")})
-public class Program implements Serializable {
+    @NamedQuery(name = "TbProgram.findAll", query = "SELECT t FROM TbProgram t")
+    , @NamedQuery(name = "TbProgram.findByIdProgram", query = "SELECT t FROM TbProgram t WHERE t.idProgram = :idProgram")
+    , @NamedQuery(name = "TbProgram.findByStrCodProgram", query = "SELECT t FROM TbProgram t WHERE t.strCodProgram = :strCodProgram")
+    , @NamedQuery(name = "TbProgram.findByStrNameProgram", query = "SELECT t FROM TbProgram t WHERE t.strNameProgram = :strNameProgram")})
+public class TbProgram implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idProgram")
+    @Column(name = "id_program")
     private Integer idProgram;
     @Basic(optional = false)
-    @Column(name = "codProgram")
-    private int codProgram;
-    @Column(name = "name")
-    private String name;
-    @ManyToMany(mappedBy = "programCollection")
-    private Collection<Favored> favoredCollection;
+    @Column(name = "str_cod_program")
+    private String strCodProgram;
+    @Column(name = "str_name_program")
+    private String strNameProgram;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tbProgramIdProgram")
+    private Collection<TbPayments> tbPaymentsCollection;
 
-    public Program() {
+    public TbProgram() {
     }
 
-    public Program(Integer idProgram) {
+    public TbProgram(Integer idProgram) {
         this.idProgram = idProgram;
     }
 
-    public Program(Integer idProgram, int codProgram) {
+    public TbProgram(Integer idProgram, String strCodProgram) {
         this.idProgram = idProgram;
-        this.codProgram = codProgram;
+        this.strCodProgram = strCodProgram;
     }
 
     public Integer getIdProgram() {
@@ -68,29 +69,29 @@ public class Program implements Serializable {
         this.idProgram = idProgram;
     }
 
-    public int getCodProgram() {
-        return codProgram;
+    public String getStrCodProgram() {
+        return strCodProgram;
     }
 
-    public void setCodProgram(int codProgram) {
-        this.codProgram = codProgram;
+    public void setStrCodProgram(String strCodProgram) {
+        this.strCodProgram = strCodProgram;
     }
 
-    public String getName() {
-        return name;
+    public String getStrNameProgram() {
+        return strNameProgram;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStrNameProgram(String strNameProgram) {
+        this.strNameProgram = strNameProgram;
     }
 
     @XmlTransient
-    public Collection<Favored> getFavoredCollection() {
-        return favoredCollection;
+    public Collection<TbPayments> getTbPaymentsCollection() {
+        return tbPaymentsCollection;
     }
 
-    public void setFavoredCollection(Collection<Favored> favoredCollection) {
-        this.favoredCollection = favoredCollection;
+    public void setTbPaymentsCollection(Collection<TbPayments> tbPaymentsCollection) {
+        this.tbPaymentsCollection = tbPaymentsCollection;
     }
 
     @Override
@@ -103,10 +104,10 @@ public class Program implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Program)) {
+        if (!(object instanceof TbProgram)) {
             return false;
         }
-        Program other = (Program) object;
+        TbProgram other = (TbProgram) object;
         if ((this.idProgram == null && other.idProgram != null) || (this.idProgram != null && !this.idProgram.equals(other.idProgram))) {
             return false;
         }
@@ -115,7 +116,7 @@ public class Program implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Program[ idProgram=" + idProgram + " ]";
+        return "model.TbProgram[ idProgram=" + idProgram + " ]";
     }
     
 }

@@ -8,61 +8,59 @@ package dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import model.State;
+import model.TbProgram;
 import util.PersistenceUtil;
 
 /**
  *
- * @author lucas.vianna
+ * @author amand
  */
-public class StateDAO {
- 
- public static StateDAO stateDAO;
+public class TbProgramDAO {
+          public static TbProgramDAO tbProgramDAO;
 
-    public static StateDAO getInstance() {
-        if (stateDAO == null) {
-            stateDAO = new StateDAO();
+    public static TbProgramDAO getInstance() {
+        if (tbProgramDAO == null) {
+            tbProgramDAO = new TbProgramDAO();
         }
-        return stateDAO;
+        return tbProgramDAO;
     }
 
-    public State buscar(int idState) {
+    public TbProgram buscar(int idProgram) {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("select s from State As s where s.idState =:idState ");
-        query.setParameter("idState", idState);
+        Query query = em.createQuery("select pr from TbProgram As pr where pr.idProgram =:idProgram ");
+        query.setParameter("idProgram", idProgram);
 
-        List<State> states = query.getResultList();
-        if (states != null && states.size() > 0) {
-            return states.get(0);
+        List<TbProgram> programs = query.getResultList();
+        if (programs != null && programs.size() > 0) {
+            return programs.get(0);
         }
+
         return null;
     }
 
-    public List<State> buscarTodas() {
+    public List<TbProgram> buscarTodas() {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("from State As s");
+        Query query = em.createQuery("from idProgram As pr");
         return query.getResultList();
     }
 
-    public void remover(State state) {
+    public void remover(TbProgram tbProgram) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
-        em.remove(state);
+        em.remove(tbProgram);
         em.getTransaction().commit();
     }
 
-    public State persistir(State state) {
+    public TbProgram persistir(TbProgram tbProgram) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
         try {
-            state = em.merge(state);
+            tbProgram = em.merge(tbProgram);
             em.getTransaction().commit();
             System.out.println("Registro gravado com sucesso");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return state;
-    }      
-        
-        
+        return tbProgram;
+    }
 }

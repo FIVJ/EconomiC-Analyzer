@@ -8,61 +8,61 @@ package dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import model.Region;
+import model.TbAction;
 import util.PersistenceUtil;
 
 /**
  *
  * @author lucas.vianna
  */
-public class RegionDAO {
+public class TbActionDAO {
     
- public static RegionDAO regionDAO;
+    public static TbActionDAO tbActionDAO;
 
-    public static RegionDAO getInstance() {
-        if (regionDAO == null) {
-            regionDAO = new RegionDAO();
+    public static TbActionDAO getInstance() {
+        if (tbActionDAO == null) {
+            tbActionDAO = new TbActionDAO();
         }
-        return regionDAO;
+        return tbActionDAO;
     }
 
-    public Region buscar(int idRegion) {
+    public TbAction buscar(int idAction) {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("select r from Region As r where r.idRegion =:idRegion ");
-        query.setParameter("idRegion", idRegion);
+        Query query = em.createQuery("select a from TbAction As a where a.idAction =:idAction ");
+        query.setParameter("idAction", idAction);
 
-        List<Region> regions = query.getResultList();
-        if (regions != null && regions.size() > 0) {
-            return regions.get(0);
+        List<TbAction> action = query.getResultList();
+        if (action != null && action.size() > 0) {
+            return action.get(0);
         }
+
         return null;
     }
 
-    public List<Region> buscarTodas() {
+    public List<TbAction> buscarTodas() {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("from Region As r");
+        Query query = em.createQuery("from TbAction As a");
         return query.getResultList();
     }
 
-    public void remover(Region region) {
+    public void remover(TbAction tbAction) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
-        em.remove(region);
+        em.remove(tbAction);
         em.getTransaction().commit();
     }
 
-    public Region persistir(Region region) {
+    public TbAction persistir(TbAction tbAction) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
         try {
-            region = em.merge(region);
+            tbAction = em.merge(tbAction);
             em.getTransaction().commit();
             System.out.println("Registro gravado com sucesso");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return region;
-    }      
-        
-    
+        return tbAction;
+    }
+
 }

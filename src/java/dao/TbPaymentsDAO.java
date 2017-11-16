@@ -8,61 +8,59 @@ package dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import model.City;
+import model.TbPayments;
 import util.PersistenceUtil;
 
 /**
  *
- * @author lucas.vianna
+ * @author amand
  */
-public class CityDAO {
-    
-    public static CityDAO cityDAO;
+public class TbPaymentsDAO {
+    public static TbPaymentsDAO tbPaymentsDAO;
 
-    public static CityDAO getInstance() {
-        if (cityDAO == null) {
-            cityDAO = new CityDAO();
+    public static TbPaymentsDAO getInstance() {
+        if (tbPaymentsDAO == null) {
+            tbPaymentsDAO = new TbPaymentsDAO();
         }
-        return cityDAO;
+        return tbPaymentsDAO;
     }
 
-    public City buscar(int idCity) {
+    public TbPayments buscar(int idPayment) {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("select c from City As c where c.idCity =:idCity ");
-        query.setParameter("idCity", idCity);
+        Query query = em.createQuery("select p from TbPayments As p where p.idPayment =:idPayment ");
+        query.setParameter("idPayment", idPayment);
 
-        List<City> Cities = query.getResultList();
-        if (Cities != null && Cities.size() > 0) {
-            return Cities.get(0);
+        List<TbPayments> payments = query.getResultList();
+        if (payments != null && payments.size() > 0) {
+            return payments.get(0);
         }
 
         return null;
     }
 
-    public List<City> buscarTodas() {
+    public List<TbPayments> buscarTodas() {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("from City As c");
+        Query query = em.createQuery("from idPayment As p");
         return query.getResultList();
     }
 
-    public void remover(City city) {
+    public void remover(TbPayments tbPayments) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
-        em.remove(city);
+        em.remove(tbPayments);
         em.getTransaction().commit();
     }
 
-    public City persistir(City city) {
+    public TbPayments persistir(TbPayments tbPayments) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
         try {
-            city = em.merge(city);
+            tbPayments = em.merge(tbPayments);
             em.getTransaction().commit();
             System.out.println("Registro gravado com sucesso");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return city;
-    }
-    
+        return tbPayments;
+    } 
 }

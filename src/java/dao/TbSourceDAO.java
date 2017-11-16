@@ -8,60 +8,60 @@ package dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import model.Favored;
+import model.TbSource;
 import util.PersistenceUtil;
 
 /**
  *
- * @author lucas.vianna
+ * @author amand
  */
-public class FavoredDAO {
+public class TbSourceDAO {
     
-    public static FavoredDAO favoredDAO;
+    public static TbSourceDAO tbSourceDAO;
 
-    public static FavoredDAO getInstance() {
-        if (favoredDAO == null) {
-            favoredDAO = new FavoredDAO();
+    public static TbSourceDAO getInstance() {
+        if (tbSourceDAO == null) {
+            tbSourceDAO = new TbSourceDAO();
         }
-        return favoredDAO;
+        return tbSourceDAO;
     }
 
-    public Favored buscar(int idFavored) {
+    public TbSource buscar(int idSource) {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("select f from Favored As f where f.idFavored =:idFavored ");
-        query.setParameter("idFavored", idFavored);
+        Query query = em.createQuery("select s from TbSource As s where s.idSource =:idSource ");
+        query.setParameter("idSource", idSource);
 
-        List<Favored> favored = query.getResultList();
-        if (favored != null && favored.size() > 0) {
-            return favored.get(0);
+        List<TbSource> sources = query.getResultList();
+        if (sources != null && sources.size() > 0) {
+            return sources.get(0);
         }
+
         return null;
     }
 
-    public List<Favored> buscarTodas() {
+    public List<TbSource> buscarTodas() {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("from Favored As f");
+        Query query = em.createQuery("from idSource As s");
         return query.getResultList();
     }
 
-    public void remover(Favored favored) {
+    public void remover(TbSource tbSource) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
-        em.remove(favored);
+        em.remove(tbSource);
         em.getTransaction().commit();
     }
 
-    public Favored persistir(Favored favored) {
+    public TbSource persistir(TbSource tbSource) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
         try {
-            favored = em.merge(favored);
+            tbSource = em.merge(tbSource);
             em.getTransaction().commit();
             System.out.println("Registro gravado com sucesso");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return favored;
-    }
-    
+        return tbSource;
+    } 
 }

@@ -8,60 +8,59 @@ package dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import model.Fisherman;
+import model.TbRegion;
 import util.PersistenceUtil;
 
 /**
  *
- * @author lucas.vianna
+ * @author amand
  */
-public class FishermanDAO {
+public class TbRegionDAO {
+    public static TbRegionDAO tbRegionDAO;
 
-    public static FishermanDAO fishermanDAO;
-
-    public static FishermanDAO getInstance() {
-        if (fishermanDAO == null) {
-            fishermanDAO = new FishermanDAO();
+    public static TbRegionDAO getInstance() {
+        if (tbRegionDAO == null) {
+            tbRegionDAO = new TbRegionDAO();
         }
-        return fishermanDAO;
+        return tbRegionDAO;
     }
 
-    public Fisherman buscar(int idFisherman) {
+    public TbRegion buscar(int idRegion) {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("select fi from Fisherman As fi where fi.idFisherman =:idFisherman ");
-        query.setParameter("idFisherman", idFisherman);
+        Query query = em.createQuery("select r from TbRegion As r where r.idRegion =:idRegion ");
+        query.setParameter("idRegion", idRegion);
 
-        List<Fisherman> fisherman = query.getResultList();
-        if (fisherman != null && fisherman.size() > 0) {
-            return fisherman.get(0);
+        List<TbRegion> regions = query.getResultList();
+        if (regions != null && regions.size() > 0) {
+            return regions.get(0);
         }
+
         return null;
     }
 
-    public List<Fisherman> buscarTodas() {
+    public List<TbRegion> buscarTodas() {
         EntityManager em = PersistenceUtil.getEntityManager();
-        Query query = em.createQuery("from Fisherman As fi");
+        Query query = em.createQuery("from idRegion As r");
         return query.getResultList();
     }
 
-    public void remover(Fisherman fisherman) {
+    public void remover(TbRegion tbRegion) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
-        em.remove(fisherman);
+        em.remove(tbRegion);
         em.getTransaction().commit();
     }
 
-    public Fisherman persistir(Fisherman fisherman) {
+    public TbRegion persistir(TbRegion tbRegion) {
         EntityManager em = PersistenceUtil.getEntityManager();
         em.getTransaction().begin();
         try {
-            fisherman = em.merge(fisherman);
+            tbRegion = em.merge(tbRegion);
             em.getTransaction().commit();
             System.out.println("Registro gravado com sucesso");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return fisherman;
-    }
-        
+        return tbRegion;
+    } 
 }
