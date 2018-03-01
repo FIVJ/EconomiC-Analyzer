@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="89ce538f-c30f-48e1-a407-b54f11bf109c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/build.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/DB_Model.mwb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/eclipselink/javax.persistence-2.1.0-doc.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/libs.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/nblibraries.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nbproject/ant-deploy.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/conf/MANIFEST.MF" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/conf/persistence.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/controller/ArchiveBean.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/ArchiveDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbActionDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbBeneficiariesDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbCityDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbFilesDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbFunctionDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbPaymentsDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbProgramDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbRegionDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbSourceDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbStateDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/dao/TbSubfunctionsDAO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/Archive.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbAction.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbBeneficiaries.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbCity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbFiles.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbFunctions.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbPayments.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbProgram.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbRegion.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbSource.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbState.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/TbSubfunctions.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/java/util/PersistenceUtil.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/META-INF/context.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/sun-jaxws.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/head.xhtml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/header.xhtml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/layout.xhtml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/archive.xhtml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/import.xhtml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/index.xhtml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/font-awesome.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/pfcrud.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/vis.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/workspace.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/fonts/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/ajaxloadingbar.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/ajaxloadingbar1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/exports/csv.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/exports/excel.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/exports/pdf.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/exports/xml.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/acceptDeleteIcon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/addNodeIcon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/backIcon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/connectIcon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/cross.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/cross2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/deleteIcon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/downArrow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/editIcon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/leftArrow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/minus.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/plus.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/rightArrow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/upArrow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/network/zoomExtends.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/shattered.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/timeline/delete.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/guid.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/vis.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/vis.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/resources/scripts/pfcrud.js" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1360" />
+    <option name="width" value="1360" />
+    <option name="height" value="768" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="EconomiC-Analyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EconomiC-Analyzer" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89ce538f-c30f-48e1-a407-b54f11bf109c" name="Default" comment="" />
+      <created>1519871914762</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1519871914762</updated>
+      <workItem from="1519871916489" duration="43000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="43000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1360" y="23" width="1360" height="678" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>

@@ -1,2 +1,2 @@
-# EconomiC-Analyzer
-Platform for economic analysis and prediction
+# EconomiC-Analyzer (ECA)
+Platform for data extraction, econometric analysis and prediction
