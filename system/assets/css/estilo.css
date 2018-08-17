@@ -1,0 +1,13 @@
+.box-paginacao{
+    width: 370px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.esconder{
+    visibility: hidden;
+}
+
+.mostrar{
+    visibility: visible;
+}
